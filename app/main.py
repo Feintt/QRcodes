@@ -14,12 +14,12 @@ print(f'# Any directory called "UserTemplates" or "QRImages" will be deleted and
 sleep(5)
 
 # Set the path to the CSV file
-csv_path = f'app/InfoExcel.csv'
+csv_path = f'{current_dir}/InfoExcel.csv'
 
 # Set the paths to the directories for templates and user templates
-template_dir = f'app/template'
-user_template_dir = f'app/UserTemplates'
-qr_codes_dir = f'app/QRImages'
+template_dir = f'{current_dir}/template'
+user_template_dir = f'{current_dir}/UserTemplates'
+qr_codes_dir = f'{current_dir}/QRImages'
 
 # Delete the user templates directory if it exists and create it again
 if os.path.exists(user_template_dir):

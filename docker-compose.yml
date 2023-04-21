@@ -1,10 +1,11 @@
 version: "3"
 services:
-  web:
-    container_name: qrcdes-webpage
-    image: nginx:latest
-    ports:
-      - "8888:80"
-    volumes:
-      - "./app:/QRCodes/app"
+  www:
+    stdin_open: true
+    tty: true
+    image: aikain/simplehttpserver:0.1
     restart: always
+    ports:
+      - "8080:80"
+    volumes:
+      - "./app:/app"
